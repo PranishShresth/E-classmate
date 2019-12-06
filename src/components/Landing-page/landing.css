@@ -300,11 +300,13 @@ button {
     display: flex;
   }
   .secondpage-rightcontent {
-    width: 50vw;
-    flex-basis: 100px;
+    flex-basis: content;
     flex-grow: 1;
   }
-  .secondpage-rightcontent {
+  .secondpage-rightcontent li {
+    word-wrap: wrap;
+  }
+  .secondpage-leftcontent {
     max-width: 50vw;
   }
 }
