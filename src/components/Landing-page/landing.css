@@ -64,6 +64,9 @@ header {
   z-index: 1;
   transform-origin: 4px 0px;
 }
+.logo-container h4 {
+  margin-bottom: 5px;
+}
 
 .hamburger-menu span:first-child {
   transform-origin: 0% 0%;
@@ -140,7 +143,7 @@ main img {
 .secondpage-rightcontent {
   background: url(./images/classroom.jpg) center center no-repeat;
   background-size: cover;
-  height: 300px;
+  height: auto;
   position: relative;
 }
 
@@ -275,7 +278,7 @@ footer {
 
 /* Media queries */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   /* header and navigation */
   .Log-in-text {
     display: none;

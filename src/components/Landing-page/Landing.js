@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Landingimage from "./images/landing.svg";
 import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
 import "./landing.css";
 
@@ -56,9 +57,11 @@ const ThirdSection = () => {
         </ul>
       </div>
       <div className="thirdsection-rightside">
-        <Button variant="contained" color="primary" id="sign-up-button">
-          Sign up
-        </Button>
+        <Link to="../Sign-up/registration">
+          <Button variant="contained" color="primary" id="sign-up-button">
+            Sign up
+          </Button>
+        </Link>
       </div>
     </div>
   );
