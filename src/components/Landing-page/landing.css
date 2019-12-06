@@ -50,8 +50,10 @@ header {
   list-style-type: none;
 } */
 
-.hamburger-menu span {
+.hamburger-menu {
   cursor: pointer;
+}
+.hamburger-menu span {
   display: block;
   width: 33px;
   height: 4px;
@@ -87,46 +89,17 @@ header {
   transition: display 3s;
   height: 100vh;
 }
-.light-speed-in {
-  animation-name: lightSpeedIn;
-
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-}
 
 .nav-links li {
   padding: 15px 0;
   text-decoration: none;
   color: var(--main-text-color);
 }
-@keyframes lightSpeedIn {
-  from {
-    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
-    transform: translate3d(100%, 0, 0) skewX(-30deg);
-    opacity: 0;
-  }
 
-  60% {
-    -webkit-transform: skewX(20deg);
-    transform: skewX(20deg);
-    opacity: 1;
-  }
-
-  80% {
-    -webkit-transform: skewX(-5deg);
-    transform: skewX(-5deg);
-  }
-
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
 /* first section */
 .first-section-container {
   background: #152238;
-  color: #4868e1;
+  color: var(--main-text-color);
 }
 #button-create-classroom {
   position: absolute;
@@ -191,6 +164,15 @@ button {
 
 /* footer */
 
+footer {
+  background: #152238;
+  color: var(--main-text-color);
+  height: 100px;
+}
+.footer-container hr {
+  display: block;
+}
+
 .footer-container {
   min-height: 50px;
   width: 85%;
@@ -210,6 +192,11 @@ button {
   margin: 0 0 10px;
 }
 
+.footer-link {
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
 .footer-links-container::after {
   border: 1px;
 }
@@ -226,6 +213,37 @@ button {
 }
 
 /* Animation */
+
+.light-speed-in {
+  animation-name: lightSpeedIn;
+
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+@keyframes lightSpeedIn {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
 .swing:hover {
   cursor: pointer;
   animation-name: swing;
@@ -336,7 +354,13 @@ button {
   }
   .main-container {
     display: flex;
+
     justify-content: space-evenly;
+  }
+  .content-container h1,
+  h3,
+  h6 {
+    color: var(--main-text-color);
   }
   #button-join-classroom {
     height: 40px;

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Landingimage from "./images/landing.svg";
 import Button from "@material-ui/core/Button";
-import Classroom from "./images/classroom.jpg";
 
 import "./landing.css";
 
@@ -10,10 +9,10 @@ const Secondpage = () => {
     <div className="secondpage-container" id="second-section">
       <div className="secondpage-leftcontent">
         <h1>What's this?</h1>
-        <h6>
+        <h5>
           E-classmate is an online platform where you can create your own virual
           classroom and share assignments and notes among friends
-        </h6>
+        </h5>
         <ul className="bullet-lists">
           <li>Create or join a classroom</li>
           <li>
@@ -82,7 +81,6 @@ const Footer = () => {
           <a className="footer-link" href="#">
             Privacy Policy
           </a>
-          <div className="footer-link-bar"></div>
         </div>
         <div className="footer-copyright-container">
           Copyright 2019 . E-Classmate. All rights reserved
@@ -151,7 +149,7 @@ export default class Landing extends Component {
                 </Button>
               </div>
               <a href="#second-section">
-                <i class="fas fa-angle-down fa-3x swing"></i>
+                <i className="fas fa-angle-down fa-3x swing"></i>
               </a>
             </div>
             <section>
