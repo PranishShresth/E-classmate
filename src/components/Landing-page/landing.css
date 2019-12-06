@@ -1,3 +1,6 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -7,12 +10,23 @@
 *:after {
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: smooth;
-}
 :root {
   --main-text-color: #fff;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
 header {
   display: flex;
 
@@ -146,6 +160,9 @@ main img {
 }
 
 /* second-content */
+.secondpage-container {
+  margin: 12px 0px;
+}
 
 .secondpage-rightcontent {
   background: url(./images/classroom.jpg) center center no-repeat;
@@ -157,6 +174,21 @@ main img {
 button {
   cursor: pointer;
 }
+
+/* Third-content */
+.thirdsection-rightside {
+  background: url(./images/features.svg) center center no-repeat;
+  background-size: contain;
+  height: 300px;
+  position: relative !important;
+}
+
+#sign-up-button {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+}
+
 /* footer */
 
 .footer-container {
@@ -257,6 +289,18 @@ button {
     opacity: 1;
     transform: translateY(0px);
   }
+
+  header {
+    background: linear-gradient(
+      90deg,
+      rgba(72, 105, 226, 0.9) 35%,
+      rgba(72, 105, 226, 1) 100%
+    );
+
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
   .nav-links {
     background: none;
     display: flex;
@@ -294,19 +338,39 @@ button {
     display: flex;
     justify-content: space-evenly;
   }
+  #button-join-classroom {
+    height: 40px;
+    margin-top: 40px;
+    border: 2px black solid;
+  }
 
   /* Second section */
   .secondpage-container {
     display: flex;
   }
+
+  .thirdsection-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
   .secondpage-rightcontent {
-    flex-basis: content;
+    flex-basis: 100px;
     flex-grow: 1;
   }
-  .secondpage-rightcontent li {
+
+  .thirdsection-rightside {
+    width: 50%;
+  }
+  .bullet-lists li {
     word-wrap: wrap;
+    width: 90%;
+    margin-left: 2%;
+  }
+  .thirdsection-leftside {
+    width: 50%;
+    max-width: 50%;
   }
   .secondpage-leftcontent {
-    max-width: 50vw;
+    max-width: 50%;
   }
 }

@@ -39,6 +39,7 @@ const Secondpage = () => {
           Create Classroom
         </Button>
       </div>
+      <hr />
     </div>
   );
 };
@@ -55,7 +56,11 @@ const ThirdSection = () => {
           <li>Chatroom</li>
         </ul>
       </div>
-      <div className="thirdsection-leftside"></div>
+      <div className="thirdsection-rightside">
+        <Button variant="contained" color="primary" id="sign-up-button">
+          Sign up
+        </Button>
+      </div>
     </div>
   );
 };
@@ -64,6 +69,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-container">
+        <hr />
         <div className="footer-links-container">
           <a className="footer-link" href="#">
             Contact us
