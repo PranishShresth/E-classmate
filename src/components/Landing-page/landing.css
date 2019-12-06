@@ -102,12 +102,16 @@ header {
 /* first section */
 .first-section-container {
   background: #152238;
-  color: var(--main-text-color);
 }
 #button-create-classroom {
   position: absolute;
   transform: translate(-50%, -50%);
   bottom: 0;
+}
+.content-container h1,
+h3,
+h6 {
+  color: var(--main-text-color);
 }
 #button-join-classroom {
   margin-bottom: 15px;
@@ -144,6 +148,7 @@ main img {
   background: url(./images/classroom.jpg) center center no-repeat;
   background-size: cover;
   height: auto;
+  min-height: 300px;
   position: relative;
 }
 
@@ -349,6 +354,8 @@ footer {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
     color: var(--main-text-color);
   }
   .first-section-container img {
