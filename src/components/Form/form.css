@@ -33,3 +33,8 @@
   margin: 20px auto;
   width: 100%;
 }
+@media only screen and (min-width: 600px) {
+  .form-container {
+    margin: 0 auto;
+  }
+}

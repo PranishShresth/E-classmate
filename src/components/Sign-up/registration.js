@@ -1,5 +1,16 @@
 import React from "react";
 import "./registration.css";
+import Header from "../Header/header";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import LockOpenIcon from "@material-ui/icons/LockOpen";
+
+const styles = {
+  largeIcon: {
+    width: 60,
+    height: 60
+  }
+};
 
 export default class Registration extends React.Component {
   constructor(props) {
@@ -12,6 +23,7 @@ export default class Registration extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
+
     console.log(this.state);
   };
 
@@ -23,65 +35,48 @@ export default class Registration extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="col-md-6 mx-auto text-center">
-          <div className="header-title">
-            <h1 className="wv-heading--title">E-Classmate</h1>
-            <h2 className="wv-heading--subtitle">
-              Sign Up to Get Access to our Virtual Classrooms.
-            </h2>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-4 mx-auto">
-            <div className="myform form ">
-              <form onSubmit={this.handleSubmit} method="post" name="login">
-                <div className="form-group">
-                  <input
-                    type="email"
-                    name="email"
-                    onChange={this.handleChange}
-                    className="form-control my-input"
-                    id="email"
-                    placeholder="Email"
-                  />
+      <div className="Authetication-form-container">
+        <Header />
+        <div className="registration-container">
+          <div className="form-container">
+            <div className="registration-image"></div>
+            <div className="form-contents">
+              <form method="POST">
+                <h1>LogIn</h1>
+                <div className="icon">
+                  <i
+                    class="fas fa-sign-in-alt fa-2x"
+                    style={{
+                      display: "inline-block",
+                      width: "100%",
+                      textAlign: "center"
+                    }}
+                  ></i>
                 </div>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    onChange={this.handleChange}
-                    name="password"
-                    className="form-control my-input"
-                    id="password"
-                    placeholder="Password"
-                  />
-                </div>
-
-                <div className="text-center ">
-                  <button
-                    type="submit"
-                    className=" btn btn-block send-button tx-tfm"
-                  >
-                    Create Your Free Account
-                  </button>
-                </div>
-                <div className="col-md-12 ">
-                  <div className="login-or">
-                    <hr className="hr-or" />
-                    <span className="span-or">or</span>
-                  </div>
-                </div>
-
-                <div className="form-group">
-                  <a className="btn btn-block g-button">
-                    <i className="fa fa-google"></i> Sign up with Google
-                  </a>
-                </div>
-                <p className="small mt-3">
-                  By signing up, you are indicating that you have read and agree
-                  to the <a className="ps-hero__content__link">Terms of Use</a>{" "}
-                  and <a>Privacy Policy</a>.
-                </p>
+                <TextField required id="email" label="Email" fullWidth={true} />
+                <TextField
+                  required
+                  id="password"
+                  label="Password"
+                  fullWidth={true}
+                />
+                <Button
+                  type="Submit"
+                  id="submit"
+                  variant="contained"
+                  color="primary"
+                >
+                  Log in
+                </Button>
+                <p style={{ textAlign: "center" }}>OR</p>
+                <Button
+                  type="Submit"
+                  id="submit"
+                  variant="contained"
+                  color="secondary"
+                >
+                  Log In with Google
+                </Button>
               </form>
             </div>
           </div>

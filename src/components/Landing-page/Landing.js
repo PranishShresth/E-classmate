@@ -3,6 +3,7 @@ import Landingimage from "./images/landing.svg";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import Forms from "../Form/form";
+import Header from "../Header/header";
 
 import "./landing.css";
 
@@ -92,44 +93,11 @@ const Footer = () => {
   );
 };
 export default class Landing extends Component {
-  // Handleclick = () => {
-  //   var navlinks = document.querySelector(".nav-links");
-
-  //   if (navlinks.style.display === "none" || navlinks.style.display === "") {
-  //     navlinks.style.display = "block";
-  //   } else if (navlinks.style.display === "block") {
-  //     navlinks.style.display = "none";
-  //   }
-  // };
   render() {
     return (
       <div className="landing-main-container">
         <div className="landing-container">
-          <header>
-            {/* <div className="hamburger-menu" onClick={this.Handleclick}>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div> */}
-            <div className="logo-container">
-              <h4>E-Classmate</h4>
-            </div>
-
-            <nav>
-              <ul className="nav-links">
-                <a href="#">
-                  <li className="light-speed-in">Contact</li>
-                </a>
-                <a href="#">
-                  <li className="light-speed-in">About</li>
-                </a>
-                <a href="#">
-                  <li className="light-speed-in">Log in</li>
-                </a>
-              </ul>
-            </nav>
-          </header>
-
+          <Header />
           <main>
             <div className="first-section-container">
               <div className="image-container">
