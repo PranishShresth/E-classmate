@@ -115,9 +115,7 @@ export default class Landing extends Component {
             <div className="logo-container">
               <h4>E-Classmate</h4>
             </div>
-            <div className="Log-in-text">
-              <a href="#">Log in</a>
-            </div>
+
             <nav>
               <ul className="nav-links">
                 <a href="#">

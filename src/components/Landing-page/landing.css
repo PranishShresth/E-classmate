@@ -1,5 +1,6 @@
 /* fonts */
 @import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Satisfy&display=swap");
 
 * {
   padding: 0;
@@ -12,10 +13,15 @@
 }
 :root {
   --main-text-color: #fff;
+  --heading-font: "Raleway", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.landing-container {
+  line-height: 1.8em;
 }
 
 h1,
@@ -24,23 +30,25 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--heading-font);
 }
 
 header {
   display: flex;
-
+  position: fixed;
+  width: 100%;
   justify-content: space-between;
   align-content: center;
   background: #4869e1;
   color: #fff;
   padding-top: 10px;
   padding-left: 10px;
-}
-.Log-in-text a {
-  padding-top: 4px;
-  color: var(--main-text-color);
-  text-decoration: none;
+  z-index: 999;
+  background: linear-gradient(
+    90deg,
+    rgba(72, 105, 226, 0.9) 35%,
+    rgba(72, 105, 226, 1) 100%
+  );
 }
 
 /* .nav-links { use for responsive later
@@ -65,31 +73,23 @@ header {
   transform-origin: 4px 0px;
 }
 .logo-container h4 {
-  margin-bottom: 5px;
+  font-family: "Satisfy", cursive;
 }
 
-.hamburger-menu span:first-child {
-  transform-origin: 0% 0%;
-}
-
-.hamburger-menu span:nth-last-child(2) {
-  transform-origin: 0% 100%;
+.logo-container {
+  margin-left: auto;
 }
 
 .nav-links {
-  background-color: rgba(21, 31, 33, 0.5);
+  background-color: rgba(26, 21, 53, 0.9);
   display: none;
   font-size: 1.1em;
   left: 0;
   list-style: none;
   padding: 1em;
   position: absolute;
-  top: 50px;
+  top: 45px;
   width: 40%;
-  transition: transform 300ms ease 0s;
-  opacity: 1;
-  transform: translateX(0px);
-  transition: display 3s;
   height: 100vh;
 }
 
@@ -225,7 +225,7 @@ footer {
 .light-speed-in {
   animation-name: lightSpeedIn;
 
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
 }
@@ -285,9 +285,11 @@ footer {
 
 @media only screen and (min-width: 600px) {
   /* header and navigation */
-  .Log-in-text {
-    display: none;
+
+  .logo-container {
+    margin-left: 0;
   }
+
   .nav-links li::before,
   .nav-links li::after {
     position: absolute;
@@ -316,17 +318,6 @@ footer {
     transform: translateY(0px);
   }
 
-  header {
-    background: linear-gradient(
-      90deg,
-      rgba(72, 105, 226, 0.9) 35%,
-      rgba(72, 105, 226, 1) 100%
-    );
-
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-  }
   .nav-links {
     background: none;
     display: flex;
