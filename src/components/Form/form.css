@@ -8,7 +8,9 @@
   box-sizing: border-box;
 }
 .form-controls {
-  height: 60vw;
+  height: 40vh;
+  min-height: 200px;
+
   padding: 0;
   flex-wrap: wrap;
   justify-content: stretch;
