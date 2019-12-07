@@ -93,25 +93,25 @@ const Footer = () => {
   );
 };
 export default class Landing extends Component {
-  Handleclick = () => {
-    var navlinks = document.querySelector(".nav-links");
+  // Handleclick = () => {
+  //   var navlinks = document.querySelector(".nav-links");
 
-    if (navlinks.style.display === "none" || navlinks.style.display === "") {
-      navlinks.style.display = "block";
-    } else if (navlinks.style.display === "block") {
-      navlinks.style.display = "none";
-    }
-  };
+  //   if (navlinks.style.display === "none" || navlinks.style.display === "") {
+  //     navlinks.style.display = "block";
+  //   } else if (navlinks.style.display === "block") {
+  //     navlinks.style.display = "none";
+  //   }
+  // };
   render() {
     return (
       <div className="landing-main-container">
         <div className="landing-container">
           <header>
-            <div className="hamburger-menu" onClick={this.Handleclick}>
+            {/* <div className="hamburger-menu" onClick={this.Handleclick}>
               <span></span>
               <span></span>
               <span></span>
-            </div>
+            </div> */}
             <div className="logo-container">
               <h4>E-Classmate</h4>
             </div>
@@ -133,7 +133,9 @@ export default class Landing extends Component {
 
           <main>
             <div className="first-section-container">
-              <img src={Landingimage} alt="" />
+              <div className="image-container">
+                <img src={Landingimage} alt="" />
+              </div>
               <div className="main-container">
                 <div className="content-container">
                   <h1>Share, Manage</h1>
@@ -150,7 +152,10 @@ export default class Landing extends Component {
                 </Button>
               </div>
               <a href="#second-section">
-                <i className="fas fa-angle-down fa-3x swing"></i>
+                <i
+                  className="fas fa-angle-down fa-3x swing"
+                  style={{ color: "#ffffff" }}
+                ></i>
               </a>
             </div>
             <section>

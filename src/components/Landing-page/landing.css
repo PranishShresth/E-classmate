@@ -51,13 +51,6 @@ header {
   );
 }
 
-/* .nav-links { use for responsive later
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-  list-style-type: none;
-} */
-
 .hamburger-menu {
   cursor: pointer;
 }
@@ -76,11 +69,7 @@ header {
   font-family: "Satisfy", cursive;
 }
 
-.logo-container {
-  margin-left: auto;
-}
-
-.nav-links {
+/* .nav-links { USE FOR HAMBURGER MENU
   background-color: rgba(26, 21, 53, 0.9);
   display: none;
   font-size: 1.1em;
@@ -91,10 +80,16 @@ header {
   top: 45px;
   width: 40%;
   height: 100vh;
+} */
+.nav-links {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
-
 .nav-links li {
-  padding: 15px 0;
+  display: block;
+  padding: 0px 10px;
   text-decoration: none;
   color: var(--main-text-color);
 }
@@ -102,29 +97,44 @@ header {
 /* first section */
 .first-section-container {
   background: #152238;
+  height: 100vh;
+  min-height: 600px;
 }
 #button-create-classroom {
   position: absolute;
   transform: translate(-50%, -50%);
   bottom: 0;
 }
+
+.image-container {
+  height: 50vh;
+}
+
+.image-container img {
+  height: 400px;
+  width: 400px;
+  margin: auto;
+  display: block;
+}
+.main-container {
+  height: 40vh;
+}
+.content-container {
+  align-self: center;
+}
+
 .content-container h1,
 h3,
 h6 {
   color: var(--main-text-color);
 }
 #button-join-classroom {
-  margin-bottom: 15px;
+  margin-top: 15px;
+  align-self: center;
 }
 
 main {
   width: 100%;
-}
-main img {
-  height: 200px;
-  width: 200px;
-  margin: 0 auto;
-  display: block;
 }
 
 .landing-container {
@@ -349,6 +359,7 @@ footer {
     overflow: hidden;
     color: var(--main-text-color);
   }
+
   .first-section-container img {
     width: 400px;
     height: 400px;
@@ -358,6 +369,10 @@ footer {
 
     justify-content: space-evenly;
   }
+
+  .content-container {
+    margin-top: 50px;
+  }
   .content-container h1,
   h3,
   h6 {
@@ -366,7 +381,6 @@ footer {
   #button-join-classroom {
     height: 40px;
     margin-top: 40px;
-    border: 2px black solid;
   }
 
   /* Second section */
