@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.form-controls {
+  height: 60vw;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: stretch;
+}
+
+.form-rightside {
+  flex: 1;
+  text-align: justify;
+}
+
+.form-rightside {
+  flex: 1;
+}
+
+.form-container {
+  margin: 0 10px;
+}
+
+#submit {
+  margin: 20px auto;
+  width: 100%;
+}

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Landingimage from "./images/landing.svg";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
+import Forms from "../Form/form";
 
 import "./landing.css";
 
@@ -39,7 +40,6 @@ const Secondpage = () => {
           Create Classroom
         </Button>
       </div>
-      <hr />
     </div>
   );
 };
@@ -71,7 +71,6 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-container">
-        <hr />
         <div className="footer-links-container">
           <a className="footer-link" href="#">
             Contact us
@@ -161,8 +160,17 @@ export default class Landing extends Component {
             <section>
               <Secondpage />
             </section>
+            <hr />
             <section>
               <ThirdSection />
+            </section>
+            <hr />
+            <section>
+              <h1>Get in Touch</h1>
+              <h6 style={{ color: "black" }}>
+                Want to get in touch? We'd love to hear from you.
+              </h6>
+              <Forms />
             </section>
           </main>
         </div>

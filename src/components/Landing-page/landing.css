@@ -19,6 +19,9 @@
 html {
   scroll-behavior: smooth;
 }
+hr {
+  margin: 0 40px;
+}
 
 .landing-container {
   line-height: 1.8em;
@@ -215,9 +218,6 @@ footer {
   color: var(--main-text-color);
 }
 
-.footer-links-container::after {
-  border: 1px;
-}
 .footer-link-bar {
   margin: 0 15px;
   height: 15px;
