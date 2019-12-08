@@ -3,7 +3,6 @@ import Landingimage from "../../assets/svg/landing.svg";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import Forms from "../../components/Form/form";
-import Header from "../../components/Header/header";
 
 import "./landing.css";
 

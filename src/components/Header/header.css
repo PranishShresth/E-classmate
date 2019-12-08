@@ -16,6 +16,12 @@ header {
   );
 }
 
+.logo {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
 .hamburger-menu {
   cursor: pointer;
 }

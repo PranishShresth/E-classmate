@@ -3,14 +3,14 @@ import "./registration.css";
 import Header from "../Header/header";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import LockOpenIcon from "@material-ui/icons/LockOpen";
+// import LockOpenIcon from "@material-ui/icons/LockOpen";
 
-const styles = {
-  largeIcon: {
-    width: 60,
-    height: 60
-  }
-};
+// const styles = {
+//   largeIcon: {
+//     width: 60,
+//     height: 60
+//   }
+// };
 
 export default class Registration extends React.Component {
   constructor(props) {
