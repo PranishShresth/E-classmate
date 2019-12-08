@@ -4,11 +4,15 @@
 .Authetication-form-container {
   height: 100%;
   min-height: 100vh;
-  background: #152238;
+  background-image: linear-gradient(
+    136deg,
+    rgb(0, 158, 253) 0%,
+    rgb(42, 245, 152) 100%
+  );
 }
 
 .registration-container {
-  padding: 10vh 4vw;
+  padding: 30vh 4vw;
   margin: 0 auto;
 }
 
@@ -18,33 +22,86 @@
 }
 
 .registration-image {
+  position: relative;
+}
+.registration-image img {
+  height: 50vw;
+  display: block;
+  width: 100%;
+  filter: blur(3px);
+}
+
+.registration-image h5 {
+  color: var(--main-text-color);
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(to right, #000, #d3e24a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* .registration-image {
   height: 200px;
   width: auto;
-  background: url(./background.jpg) center center no-repeat;
+  background: url(./blue.jpg) center center no-repeat;
+
   background-size: cover;
-}
+} */
 
 .form-contents {
   background: #fff;
   padding: 0 20px;
 }
-
+.tabcontents {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1vw 0;
+}
 .form-contents h1 {
   width: 100%;
   margin: 0;
   padding-bottom: 5px;
   text-align: center;
+  font-weight: 200;
+  text-transform: uppercase;
 }
-.form-contents h1::before,
-h1::after {
-  display: inline;
+.form-contents h1::after {
+  content: "";
+  width: 80%;
+  margin-left: 4.2vw;
+  margin-top: 1vw;
+  display: block;
+  background: black;
+  height: 1px;
+}
+
+.active {
+  color: red;
+}
+
+.ToS {
+  display: flex;
+  align-content: center;
+}
+.ToS p {
+  height: 4vh;
+  font-size: 12px;
+  margin: 0;
+  word-wrap: wrap;
+  text-align: center;
 }
 @media only screen and (min-width: 600px) {
   .form-container {
     flex-direction: row;
   }
-  .registration-image {
+  .registration-image img {
     width: 50vw;
+
     height: auto;
   }
 }

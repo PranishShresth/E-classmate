@@ -23,7 +23,7 @@ const Secondpage = () => {
           </li>
           <li>Upvote for the topic you need most.</li>
           <li>
-            Nrowse through assignments and notes shared by classmates of the
+            Browse through assignments and notes shared by classmates of the
             same topic
           </li>
           <li>Download or read online</li>
@@ -67,30 +67,6 @@ const ThirdSection = () => {
   );
 };
 
-const Footer = () => {
-  return (
-    <footer>
-      <div className="footer-container">
-        <div className="footer-links-container">
-          <a className="footer-link" href="#">
-            Contact us
-          </a>
-          <div className="footer-link-bar"></div>
-          <a className="footer-link" href="#">
-            FAQ
-          </a>
-          <div className="footer-link-bar"></div>
-          <a className="footer-link" href="#">
-            Privacy Policy
-          </a>
-        </div>
-        <div className="footer-copyright-container">
-          Copyright 2019 . E-Classmate. All rights reserved
-        </div>
-      </div>
-    </footer>
-  );
-};
 export default class Landing extends Component {
   render() {
     return (
@@ -131,7 +107,7 @@ export default class Landing extends Component {
               <ThirdSection />
             </section>
             <hr />
-            <section className='form-section'>
+            <section className="form-section">
               <h1>Get in Touch</h1>
               <h6 style={{ color: "black" }}>
                 Want to get in touch? We'd love to hear from you.
@@ -140,8 +116,6 @@ export default class Landing extends Component {
             </section>
           </main>
         </div>
-
-        <Footer />
       </div>
     );
   }

@@ -1,8 +1,9 @@
 import React from "react";
 import "./registration.css";
 import Header from "../Header/header";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
+import Blue from "./blue.jpg";
+import { TextField, Button, Checkbox } from "@material-ui/core";
+
 // import LockOpenIcon from "@material-ui/icons/LockOpen";
 
 // const styles = {
@@ -33,26 +34,48 @@ export default class Registration extends React.Component {
     });
   };
 
+  componentDidMount() {
+    var signup = document.getElementById("sign-up");
+    signup.style.display = "none";
+  }
+  ChangetoSignup = e => {
+    var login = document.getElementById("log-in");
+    login.style.display = "none";
+    var signup = document.getElementById("sign-up");
+    signup.style.display = "block";
+  };
+  ChangetoLogin = e => {
+    var login = document.getElementById("log-in");
+    login.style.display = "block";
+    var signup = document.getElementById("sign-up");
+    signup.style.display = "none";
+  };
+
   render() {
     return (
       <div className="Authetication-form-container">
         <Header />
         <div className="registration-container">
           <div className="form-container">
-            <div className="registration-image"></div>
+            <div className="registration-image">
+              <img src={Blue} alt=""></img>
+              <h5>
+                Welcome to <br />
+                E-Classmate
+              </h5>
+            </div>
             <div className="form-contents">
-              <form method="POST">
-                <h1>LogIn</h1>
-                <div className="icon">
-                  <i
-                    class="fas fa-sign-in-alt fa-2x"
-                    style={{
-                      display: "inline-block",
-                      width: "100%",
-                      textAlign: "center"
-                    }}
-                  ></i>
-                </div>
+              <div className="tabcontents">
+                <Button id="log-in-tab" onClick={this.ChangetoLogin}>
+                  Log in
+                </Button>
+                <Button id="sign-up-tab" onClick={this.ChangetoSignup}>
+                  Sign up
+                </Button>
+              </div>
+              <form method="POST" id="log-in">
+                <h1>Log In</h1>
+
                 <TextField required id="email" label="Email" fullWidth={true} />
                 <TextField
                   required
@@ -66,7 +89,7 @@ export default class Registration extends React.Component {
                   variant="contained"
                   color="primary"
                 >
-                  Log in
+                  Sign in
                 </Button>
                 <p style={{ textAlign: "center" }}>OR</p>
                 <Button
@@ -76,6 +99,38 @@ export default class Registration extends React.Component {
                   color="secondary"
                 >
                   Log In with Google
+                </Button>
+              </form>
+              <form method="POST" id="sign-up">
+                <h1>Sign Up</h1>
+
+                <TextField required id="email" label="Email" fullWidth={true} />
+                <TextField
+                  required
+                  id="password"
+                  label="Password"
+                  fullWidth={true}
+                />
+                <TextField
+                  required
+                  id="Confirm-password"
+                  label="Confirm Password"
+                  fullWidth={true}
+                />
+                <div className="ToS">
+                  <Checkbox value="checkedB" color="primary" />
+                  <p>
+                    Click here to indicate you have read and agree to Terms and
+                    Conditions of E-Classmate.
+                  </p>
+                </div>
+                <Button
+                  type="Submit"
+                  id="submit"
+                  variant="contained"
+                  color="primary"
+                >
+                  Sign up
                 </Button>
               </form>
             </div>
