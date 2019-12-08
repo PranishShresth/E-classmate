@@ -133,7 +133,7 @@ export default class Landing extends Component {
               <ThirdSection />
             </section>
             <hr />
-            <section>
+            <section className='form-section'>
               <h1>Get in Touch</h1>
               <h6 style={{ color: "black" }}>
                 Want to get in touch? We'd love to hear from you.

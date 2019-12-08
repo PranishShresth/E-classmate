@@ -38,7 +38,6 @@
 .form-contents h1::before,
 h1::after {
   display: inline;
-  content: " --- ";
 }
 @media only screen and (min-width: 600px) {
   .form-container {
