@@ -99,11 +99,15 @@ main {
 }
 
 .secondpage-rightcontent {
-  background: url(./images/classroom.jpg) center center no-repeat;
+  background: url(../../assets/img/classroom.jpg) center center no-repeat;
   background-size: cover;
   height: auto;
   min-height: 300px;
   position: relative;
+}
+
+.secondpage-leftcontent {
+  margin: 2%;
 }
 
 button {
@@ -112,16 +116,27 @@ button {
 
 /* Third-content */
 .thirdsection-rightside {
-  background: url(./images/features.svg) center center no-repeat;
+  background: url(../../assets/svg/features.svg) center center no-repeat;
   background-size: contain;
   height: 300px;
   position: relative !important;
+}
+
+.thirdsection-leftside {
+  margin: 2%;
 }
 
 #sign-up-button {
   position: absolute;
   transform: translate(-50%, -50%);
   bottom: 0;
+}
+
+/*Form section */
+.form-section {
+  display: block;
+  margin: 2%;
+  align-content: center;
 }
 
 /* footer */
@@ -210,6 +225,7 @@ footer {
   /* Second section */
   .secondpage-container {
     display: flex;
+    margin-right: 3%;
   }
 
   .thirdsection-container {

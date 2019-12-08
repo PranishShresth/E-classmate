@@ -8,7 +8,7 @@
 }
 
 .registration-container {
-  padding: 115px 40px;
+  padding: 10vh 4vw;
   margin: 0 auto;
 }
 
@@ -38,7 +38,6 @@
 .form-contents h1::before,
 h1::after {
   display: inline;
-  content: " --- ";
 }
 @media only screen and (min-width: 600px) {
   .form-container {
