@@ -1,7 +1,6 @@
 import React from "react";
 import "./header.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Landing from "../Landing-page/Landing";
 
 export default function Header() {
   return (
@@ -14,7 +13,6 @@ export default function Header() {
     //     navlinks.style.display = "none";
     //   }
     // };
-    <Router>
       <header>
         {/* <div className="hamburger-menu" onClick={this.Handleclick}>
               <span></span>
@@ -41,6 +39,5 @@ export default function Header() {
           </ul>
         </nav>
       </header>
-    </Router>
   );
 }

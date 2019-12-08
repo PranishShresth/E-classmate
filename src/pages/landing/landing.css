@@ -99,7 +99,7 @@ main {
 }
 
 .secondpage-rightcontent {
-  background: url(./images/classroom.jpg) center center no-repeat;
+  background: url(../../assets/img/classroom.jpg) center center no-repeat;
   background-size: cover;
   height: auto;
   min-height: 300px;
@@ -116,7 +116,7 @@ button {
 
 /* Third-content */
 .thirdsection-rightside {
-  background: url(./images/features.svg) center center no-repeat;
+  background: url(../../assets/svg/features.svg) center center no-repeat;
   background-size: contain;
   height: 300px;
   position: relative !important;
