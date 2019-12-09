@@ -1,73 +1,58 @@
-import React, { Component } from "react";
-import { AppBar, Drawer } from "@material-ui/core";
-import { thisExpression } from "@babel/types";
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import "./dashboard.css";
 
-export default class DashBoard extends Component {}
+const useStyles = makeStyles(theme => ({
+  root: { flexGrow: 1 },
 
-// export default class DashBoard extends Component {
-//   state = {
-//     userId: Math.floor(Math.random() * 200 + 100),
-//     title: "",
-//     body: ""
-//   };
+  menuButton: {
+    marginRight: theme.spacing(1)
+  },
+  title: {
+    flexGrow: 1
+  }
+}));
 
-//   //   async componentDidMount() {
-//   //     const api = await fetch("https://jsonplaceholder.typicode.com/posts");
-//   //     const data = await api.json();
-//   //     this.setState({
-//   //       data
-//   //     });
-//   //     console.log(this.state);
-//   //   }
+function ButtonAppBar() {
+  const classes = useStyles();
 
-//   handleSubmit = event => {
-//     event.preventDefault();
-//     fetch("https://jsonplaceholder.typicode.com/posts", {
-//       method: "POST",
-//       headers: {
-//         Accept: "application/json",
-//         "Content-Type": "application/json"
-//       },
-//       body: JSON.stringify({
-//         body: this.state.body,
-//         title: this.state.title,
-//         userId: Math.floor(Math.random() * 200 + 100)
-//       })
-//     }) .then(response => response.json())
-//     .then(json => console.log(json))
+  return (
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton
+            edge="start"
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="menu"
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            E-Classmate
+          </Typography>
+          <Button color="inherit">
+            <AccountCircle />
+          </Button>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
+}
 
-//     console.log(this.state);
-//   };
-
-//   render() {
-//     return (
-//       <div>
-//         {/* {this.state.data.map(post => {
-//           return (
-//             <div>
-//               <h1>{post.title}</h1>
-//               <p>{post.id}</p>
-//             </div>
-//           );
-//         })} */}
-//         <form onSubmit={this.handleSubmit}>
-//           <input
-//             placeholder="Title"
-//             type="text"
-//             value={this.state.title}
-//             onChange={ev => this.setState({ title: ev.target.value })}
-//           />
-//           <input
-//             placeholder="Body"
-//             type="text"
-//             value={this.state.body}
-//             onChange={ev => {
-//               this.setState({ body: ev.target.value });
-//             }}
-//           />
-//           <button type="submit">Send</button>
-//         </form>
-//       </div>
-//     );
-//   }
-// }
+export default class Dashboard extends React.Component {
+  render() {
+    return (
+      <div>
+        <ButtonAppBar />
+      </div>
+    );
+  }
+}

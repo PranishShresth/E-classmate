@@ -1,0 +1,10 @@
+.MuiAppBar-root {
+  margin: 0;
+  padding: 0;
+  background-color: #3f5112;
+}
+
+.MuiAppBar-colorPrimary {
+  background-color: #3f5112;
+  color: red;
+}
