@@ -28,7 +28,7 @@ export default function Header() {
       <nav>
         <ul className="nav-links">
           <Link to="/">
-            <a>
+            <a href="#contact-form">
               <li className="light-speed-in">Contact</li>
             </a>
           </Link>

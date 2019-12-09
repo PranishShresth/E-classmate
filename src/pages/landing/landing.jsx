@@ -3,8 +3,65 @@ import Landingimage from "../../assets/svg/landing.svg";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import Forms from "../../components/Form/form";
+import { Header, Footer } from "../../links/links";
 
 import "./landing.css";
+
+export default class Landing extends Component {
+  render() {
+    return (
+      <div className="landing-main-container">
+        <Header />
+        <div className="landing-container">
+          <main>
+            <div className="first-section-container">
+              <div className="image-container">
+                <img src={Landingimage} alt="" />
+              </div>
+              <div className="main-container">
+                <div className="content-container">
+                  <h1>Share, Manage</h1>
+                  <h3>Notes, Assignments</h3>
+                  <h6>Among Friends</h6>
+                </div>
+
+                <Button
+                  variant="contained"
+                  color="primary"
+                  id="button-join-classroom"
+                >
+                  Join our Classroom
+                </Button>
+              </div>
+              <a href="#second-section">
+                <i
+                  className="fas fa-angle-down fa-3x swing"
+                  style={{ color: "#ffffff" }}
+                ></i>
+              </a>
+            </div>
+            <section>
+              <Secondpage />
+            </section>
+            <hr />
+            <section>
+              <ThirdSection />
+            </section>
+            <hr />
+            <section id="contact-form" className="form-section">
+              <h1>Get in Touch</h1>
+              <h6 style={{ color: "black" }}>
+                Want to get in touch? We'd love to hear from you.
+              </h6>
+              <Forms />
+            </section>
+          </main>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+}
 
 const Secondpage = () => {
   return (
@@ -66,57 +123,3 @@ const ThirdSection = () => {
     </div>
   );
 };
-
-export default class Landing extends Component {
-  render() {
-    return (
-      <div className="landing-main-container">
-        <div className="landing-container">
-          <main>
-            <div className="first-section-container">
-              <div className="image-container">
-                <img src={Landingimage} alt="" />
-              </div>
-              <div className="main-container">
-                <div className="content-container">
-                  <h1>Share, Manage</h1>
-                  <h3>Notes, Assignments</h3>
-                  <h6>Among Friends</h6>
-                </div>
-
-                <Button
-                  variant="contained"
-                  color="primary"
-                  id="button-join-classroom"
-                >
-                  Join our Classroom
-                </Button>
-              </div>
-              <a href="#second-section">
-                <i
-                  className="fas fa-angle-down fa-3x swing"
-                  style={{ color: "#ffffff" }}
-                ></i>
-              </a>
-            </div>
-            <section>
-              <Secondpage />
-            </section>
-            <hr />
-            <section>
-              <ThirdSection />
-            </section>
-            <hr />
-            <section className="form-section">
-              <h1>Get in Touch</h1>
-              <h6 style={{ color: "black" }}>
-                Want to get in touch? We'd love to hear from you.
-              </h6>
-              <Forms />
-            </section>
-          </main>
-        </div>
-      </div>
-    );
-  }
-}

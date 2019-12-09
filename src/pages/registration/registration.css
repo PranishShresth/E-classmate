@@ -28,11 +28,11 @@
   height: 50vw;
   display: block;
   width: 100%;
-  filter: blur(3px);
+  filter: blur(3.5px);
 }
 
 .registration-image h5 {
-  color: var(--main-text-color);
+  color: #152238;
   text-align: center;
   font-weight: 700;
   font-size: 2rem;
@@ -40,10 +40,6 @@
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background: linear-gradient(to right, #000, #d3e24a);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 /* .registration-image {
   height: 200px;
@@ -82,8 +78,7 @@
 
 .tab-button.active {
   font-weight: 700;
-  color: red;
-  border-bottom-color: #30e1df;
+  color: #152238;
 }
 
 .ToS {
@@ -103,7 +98,6 @@
   }
   .registration-image img {
     width: 50vw;
-
-    height: auto;
+    height: 100%;
   }
 }

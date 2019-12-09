@@ -1,6 +1,6 @@
 import React from "react";
 import "./registration.css";
-import Header from "../Header/header";
+import { Header, Footer } from "../../links/links";
 import Blue from "./blue.jpg";
 import { TextField, Button, Checkbox } from "@material-ui/core";
 
@@ -144,6 +144,7 @@ export default class Registration extends React.Component {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
