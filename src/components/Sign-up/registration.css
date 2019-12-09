@@ -57,7 +57,7 @@
   background: #fff;
   padding: 0 20px;
 }
-.tabcontents {
+.button-tab-container {
   display: flex;
   justify-content: flex-end;
   margin: 1vw 0;
@@ -80,8 +80,10 @@
   height: 1px;
 }
 
-.active {
+.tab-button.active {
+  font-weight: 700;
   color: red;
+  border-bottom-color: #30e1df;
 }
 
 .ToS {

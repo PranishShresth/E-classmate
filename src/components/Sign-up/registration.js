@@ -35,22 +35,22 @@ export default class Registration extends React.Component {
   };
 
   componentDidMount() {
-    var signup = document.getElementById("sign-up");
-    signup.style.display = "none";
+    document.getElementById("log-in-tab").click();
   }
-  ChangetoSignup = e => {
-    var login = document.getElementById("log-in");
-    login.style.display = "none";
-    var signup = document.getElementById("sign-up");
-    signup.style.display = "block";
-  };
-  ChangetoLogin = e => {
-    var login = document.getElementById("log-in");
-    login.style.display = "block";
-    var signup = document.getElementById("sign-up");
-    signup.style.display = "none";
-  };
 
+  HandleTab(id, event) {
+    var i, tablinks, tabbutton;
+    tablinks = document.querySelectorAll(".tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.display = "none";
+    }
+    tabbutton = document.querySelectorAll(".tab-button");
+    for (i = 0; i < tablinks.length; i++) {
+      tabbutton[i].className = tabbutton[i].className.replace(" active", "");
+    }
+    document.getElementById(id).style.display = "block";
+    event.currentTarget.className += " active";
+  }
   render() {
     return (
       <div className="Authetication-form-container">
@@ -65,15 +65,23 @@ export default class Registration extends React.Component {
               </h5>
             </div>
             <div className="form-contents">
-              <div className="tabcontents">
-                <Button id="log-in-tab" onClick={this.ChangetoLogin}>
+              <div className="button-tab-container">
+                <Button
+                  id="log-in-tab"
+                  className="tab-button"
+                  onClick={this.HandleTab.bind(this, "log-in")}
+                >
                   Log in
                 </Button>
-                <Button id="sign-up-tab" onClick={this.ChangetoSignup}>
+                <Button
+                  id="sign-up-tab"
+                  className="tab-button"
+                  onClick={this.HandleTab.bind(this, "sign-up")}
+                >
                   Sign up
                 </Button>
               </div>
-              <form method="POST" id="log-in">
+              <form method="POST" id="log-in" className="tablinks">
                 <h1>Log In</h1>
 
                 <TextField required id="email" label="Email" fullWidth={true} />
@@ -101,7 +109,7 @@ export default class Registration extends React.Component {
                   Log In with Google
                 </Button>
               </form>
-              <form method="POST" id="sign-up">
+              <form method="POST" id="sign-up" className="tablinks">
                 <h1>Sign Up</h1>
 
                 <TextField required id="email" label="Email" fullWidth={true} />
