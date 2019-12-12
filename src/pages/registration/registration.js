@@ -35,7 +35,7 @@ export default class Registration extends React.Component {
   };
 
   componentDidMount() {
-    document.getElementById("log-in-tab").click();
+    document.getElementById("sign-in-tab").click();
   }
 
   HandleTab(id, event) {
@@ -67,11 +67,11 @@ export default class Registration extends React.Component {
             <div className="form-contents">
               <div className="button-tab-container">
                 <Button
-                  id="log-in-tab"
+                  id="sign-in-tab"
                   className="tab-button"
-                  onClick={this.HandleTab.bind(this, "log-in")}
+                  onClick={this.HandleTab.bind(this, "sign-in")}
                 >
-                  Log in
+                  Sign in
                 </Button>
                 <Button
                   id="sign-up-tab"
@@ -81,8 +81,8 @@ export default class Registration extends React.Component {
                   Sign up
                 </Button>
               </div>
-              <form method="POST" id="log-in" className="tablinks">
-                <h1>Log In</h1>
+              <form method="POST" id="sign-in" className="tablinks">
+                <h1>Sign In</h1>
 
                 <TextField required id="email" label="Email" fullWidth={true} />
                 <TextField
@@ -107,7 +107,7 @@ export default class Registration extends React.Component {
                   variant="contained"
                   color="secondary"
                 >
-                  Log In with Google
+                  Sign In with Google
                 </Button>
               </form>
               <form method="POST" id="sign-up" className="tablinks">
