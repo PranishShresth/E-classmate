@@ -81,16 +81,25 @@ export default class Registration extends React.Component {
                   Sign up
                 </Button>
               </div>
+
+
               <form method="POST" id="sign-in" className="tablinks">
                 <h1>Sign In</h1>
 
-                <TextField required id="email" label="Email" fullWidth={true} />
+                <TextField 
+                  required 
+                  id="email" 
+                  label="Email" 
+                  fullWidth={true}
+                  margin='normal'
+                />
                 <TextField
                   required
                   id="password"
                   label="Password"
                   type="password"
                   fullWidth={true}
+                  margin='normal'
                 />
                 <Button
                   type="Submit"
@@ -110,16 +119,32 @@ export default class Registration extends React.Component {
                   Sign In with Google
                 </Button>
               </form>
+
+
               <form method="POST" id="sign-up" className="tablinks">
                 <h1>Sign Up</h1>
 
-                <TextField required id="email" label="Email" fullWidth={true} />
+                <TextField 
+                  required 
+                  id="username" 
+                  label="Username" 
+                  fullWidth={true}
+                  margin='normal' 
+                />
+                <TextField 
+                  required 
+                  id="email" 
+                  label="Email" 
+                  fullWidth={true}
+                  margin='normal' 
+                />
                 <TextField
                   required
                   id="password"
                   label="Password"
                   fullWidth={true}
                   type="password"
+                  margin='normal'
                 />
                 <TextField
                   required
@@ -127,6 +152,7 @@ export default class Registration extends React.Component {
                   label="Confirm Password"
                   fullWidth={true}
                   type="password"
+                  margin='normal'
                 />
                 <div className="ToS">
                   <Checkbox value="checkedB" color="primary" />
