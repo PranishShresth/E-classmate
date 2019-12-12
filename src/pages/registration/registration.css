@@ -4,11 +4,7 @@
 .Authetication-form-container {
   height: 100%;
   min-height: 100vh;
-  background-image: linear-gradient(
-    136deg,
-    rgb(0, 158, 253) 0%,
-    rgb(42, 245, 152) 100%
-  );
+  background-color: #152238;
 }
 
 .registration-container {
@@ -31,8 +27,8 @@
   filter: blur(3.5px);
 }
 
-.registration-image h5 {
-  color: #152238;
+.welcome-text {
+  color: black;
   text-align: center;
   font-weight: 700;
   font-size: 2rem;

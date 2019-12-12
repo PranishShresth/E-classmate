@@ -9,11 +9,6 @@ header {
   padding-top: 10px;
   padding-left: 10px;
   z-index: 999;
-  background: linear-gradient(
-    90deg,
-    rgba(72, 105, 226, 0.9) 35%,
-    rgba(72, 105, 226, 1) 100%
-  );
 }
 
 .logo {

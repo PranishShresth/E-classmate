@@ -59,10 +59,10 @@ export default class Registration extends React.Component {
           <div className="form-container">
             <div className="registration-image">
               <img src={Blue} alt=""></img>
-              <h5>
-                Welcome to <br />
-                E-Classmate
-              </h5>
+              <h6 className='welcome-text'>
+                Welcome to
+                E&#x2011;Classmate
+              </h6>
             </div>
             <div className="form-contents">
               <div className="button-tab-container">
@@ -89,6 +89,7 @@ export default class Registration extends React.Component {
                   required
                   id="password"
                   label="Password"
+                  type="password"
                   fullWidth={true}
                 />
                 <Button
@@ -118,12 +119,14 @@ export default class Registration extends React.Component {
                   id="password"
                   label="Password"
                   fullWidth={true}
+                  type="password"
                 />
                 <TextField
                   required
                   id="Confirm-password"
                   label="Confirm Password"
                   fullWidth={true}
+                  type="password"
                 />
                 <div className="ToS">
                   <Checkbox value="checkedB" color="primary" />
