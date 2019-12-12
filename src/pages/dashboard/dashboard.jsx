@@ -1,58 +1,38 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import "./dashboard.css";
-
-const useStyles = makeStyles(theme => ({
-  root: { flexGrow: 1 },
-
-  menuButton: {
-    marginRight: theme.spacing(1)
-  },
-  title: {
-    flexGrow: 1
-  }
-}));
-
-function ButtonAppBar() {
-  const classes = useStyles();
-
-  return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            E-Classmate
-          </Typography>
-          <Button color="inherit">
-            <AccountCircle />
-          </Button>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
-}
 
 export default class Dashboard extends React.Component {
   render() {
     return (
-      <div>
-        <ButtonAppBar />
+      <div className="dasboard-container">
+        <div className="main-wrapper">
+          <div className="left-nav-bar">
+            <h1>ClassName</h1>
+            <hr />
+            <h1>Navigate</h1>
+            <ul>
+              <li>Assignments</li>
+              <li>Notes</li>
+              <li>Chats</li>
+            </ul>
+          </div>
+          <AppBar />
+        </div>
       </div>
     );
   }
 }
+
+const AppBar = () => {
+  return (
+    <div class="App-bar-container">
+      <header>
+        <h1>E-Classmate</h1>
+        <AccountCircle />
+      </header>
+      <div className="contents"></div>
+    </div>
+  );
+};
