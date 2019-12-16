@@ -11,9 +11,9 @@ const theme = createMuiTheme({
     palette: {
         primary: {
             main: '#4869E1',
-        }
+        },
+        type: 'dark',
     },
-    type: 'dark',
 })
 
 ReactDOM.render(
