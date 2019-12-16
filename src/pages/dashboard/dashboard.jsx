@@ -10,7 +10,10 @@ import { makeStyles, useTheme } from '@material-ui/core/styles'
 import SwipeableViews from 'react-swipeable-views';
 import PropTypes from 'prop-types';
 
+import Assignment from '../assignment/assignment';
+import Chat from '../chat/chat';
 import DashboardHeader from '../../components/DashboardHeader/dashboard-header';
+import Note from '../note/note';
 import "./dashboard.css";
 
 const useStyles = makeStyles(theme => ({
@@ -82,13 +85,13 @@ const Dashboard = () => {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          Item One
+          <Assignment />
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          Item Two
+          <Chat />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          Item Three
+          <Note />
         </TabPanel>
       </SwipeableViews>
     </div>
