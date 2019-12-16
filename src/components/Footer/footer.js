@@ -6,17 +6,17 @@ export default function Footer() {
     <footer>
       <div className="footer-container">
         <div className="footer-links-container">
-          <a className="footer-link" href="#">
+          <span className="footer-link" href="#">
             Contact us
-          </a>
+          </span>
           <div className="footer-link-bar"></div>
-          <a className="footer-link" href="#">
+          <span className="footer-link" href="#">
             FAQ
-          </a>
+          </span>
           <div className="footer-link-bar"></div>
-          <a className="footer-link" href="#">
+          <span className="footer-link" href="#">
             Privacy Policy
-          </a>
+          </span>
         </div>
         <div className="footer-copyright-container">
           Copyright 2019 . E-Classmate. All rights reserved

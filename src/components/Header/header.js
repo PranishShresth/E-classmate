@@ -28,19 +28,19 @@ export default function Header() {
       <nav>
         <ul className="nav-links">
           <Link to="/">
-            <a href="#contact-form">
+            <span>
               <li className="light-speed-in">Contact</li>
-            </a>
+            </span>
           </Link>
           <Link to="/">
-            <a>
+            <span>
               <li className="light-speed-in">About</li>
-            </a>
+            </span>
           </Link>
           <Link to="/signup">
-            <a>
+            <span>
               <li className="light-speed-in">Sign in</li>
-            </a>
+            </span>
           </Link>
         </ul>
       </nav>
