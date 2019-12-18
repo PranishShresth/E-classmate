@@ -1,13 +1,22 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import { Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
-const Chat = () => (
-    <Fragment>
+const useStyles = makeStyles(theme => ({
+    container: {
+        minHeight: '100vh',
+    },
+}));
+
+const Chat = () => {
+    const classes = useStyles();
+    return (
+    <div className={classes.container}>
         <Typography>
             This is chat page.
         </Typography>
-    </Fragment>
+    </div>
 );
-
+}
 export default Chat;

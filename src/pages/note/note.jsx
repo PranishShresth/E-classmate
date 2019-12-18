@@ -1,13 +1,23 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import { Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
-const Note = () => (
-    <Fragment>
+const useStyles = makeStyles(theme => ({
+    container: {
+        minHeight: '100vh',
+    },
+}))
+
+
+const Note = () => {
+    const classes = useStyles();
+    return (
+    <div className={classes.container}>
         <Typography>
             This is note page.
         </Typography>
-    </Fragment>
-);
+    </div>
+);}
 
 export default Note;
