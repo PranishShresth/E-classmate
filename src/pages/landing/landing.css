@@ -55,7 +55,7 @@ h6 {
 .image-container img {
   height: 60vh;
 
-  min-height: 100px;
+  min-height: 120px;
   width: 60vw;
   margin: auto;
   display: block;

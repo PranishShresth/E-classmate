@@ -3,7 +3,6 @@ import "./App.css";
 import Dashboard from "./pages/dashboard/dashboard";
 import Landing from "./pages/landing/landing";
 import Registration from "./pages/registration/registration";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Error from "./pages/404/Error";
 
