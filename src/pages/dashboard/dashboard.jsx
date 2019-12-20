@@ -14,7 +14,6 @@ import Assignment from '../assignment/assignment';
 import Chat from '../chat/chat';
 import DashboardHeader from '../../components/DashboardHeader/dashboard-header';
 import Note from '../note/note';
-import "./dashboard.css"; 
 
 const useStyles = makeStyles(theme => ({
   tabs: {
