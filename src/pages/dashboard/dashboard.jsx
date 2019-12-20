@@ -14,12 +14,16 @@ import Assignment from '../assignment/assignment';
 import Chat from '../chat/chat';
 import DashboardHeader from '../../components/DashboardHeader/dashboard-header';
 import Note from '../note/note';
-import "./dashboard.css";
+import "./dashboard.css"; 
 
 const useStyles = makeStyles(theme => ({
   tabs: {
     alignContent: 'center'
-  }
+  },
+  root: {
+    backgroundColor: theme.palette.background.paper,
+    color: theme.palette.common.white,
+  },
 }));
 
 function TabPanel(props) {
@@ -52,6 +56,8 @@ const Dashboard = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  console.log(theme);
   
   const handleChangeIndex = index => {
     setValue(index);
@@ -65,7 +71,7 @@ const Dashboard = () => {
   }
   
   return (
-    <div className="dasboard-container">
+    <div className={classes.root}>
         <DashboardHeader />
         <Tabs 
           className={classes.tabs} 
