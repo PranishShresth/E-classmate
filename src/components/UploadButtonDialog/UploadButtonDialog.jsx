@@ -1,23 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
+import { Button, Container, Dialog } from '@material-ui/core';
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+
+import UploadButton from '../UploadButton/UploadButton';
 
 const useStyles = makeStyles(theme => ({  
     button: {
-        marginLeft: 'auto',
         backgroundColor: theme.palette.primary.main,
     },
     buttonContainer: {
-        marginLeft: '24vw',
-        marginBottom: '11px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: '7px',
+    },
+    uploadDialog: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight: '30vh',
+      minWidth: '80vw',
+      backgroundColor: theme.palette.background.paper,
     },
 }));
 
 const SimpleDialog = (props) => {
   const { onClose, open } = props;
+  const classes = useStyles();
 
   const handleClose = () => {
     onClose();
@@ -25,7 +36,9 @@ const SimpleDialog = (props) => {
 
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      hmmm
+      <Container className={classes.uploadDialog}>
+        <UploadButton />
+      </Container>
     </Dialog>
   );
 };
