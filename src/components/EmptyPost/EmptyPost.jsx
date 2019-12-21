@@ -8,6 +8,7 @@ import UploadButtonDialog from '../../components/UploadButtonDialog/UploadButton
 const useStyles = makeStyles(theme => ({
     card: {
         backgroundColor: theme.palette.common.black,
+        marginBottom: '3vh',
     },
 }))
 

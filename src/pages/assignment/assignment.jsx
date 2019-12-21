@@ -1,11 +1,13 @@
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
+
+import AddPost from '../../components/AddPost/AddPost';
 import EmptyPost from '../../components/EmptyPost/EmptyPost';
 
 const useStyles = makeStyles(theme => ({
     container: {
-        minHeight: '100vh',
+        minHeight: '80vh',
     },
     card: {
         backgroundColor: theme.palette.common.black,
@@ -25,6 +27,7 @@ const Assignment = () => {
     const classes = useStyles();
     return (
     <div className={classes.container}>        
+        <AddPost />
         <EmptyPost />
     </div>
     );
