@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import AddPost from '../../components/AddPost/AddPost';
 import EmptyPost from '../../components/EmptyPost/EmptyPost';
+import OnePost from '../../components/OnePost/OnePost';
 
 const useStyles = makeStyles(theme => ({
     container: {
@@ -29,6 +30,7 @@ const Assignment = () => {
     <div className={classes.container}>        
         <AddPost />
         <EmptyPost />
+        <OnePost />
     </div>
     );
 };
