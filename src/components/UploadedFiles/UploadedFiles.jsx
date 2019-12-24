@@ -30,82 +30,46 @@ const UploadedFiles = () => {
 
   return (
     <Card className={classes.card}>
-      {/* <div className={classes.root}>
-        <GridList className={classes.gridList} cols={2.5}>
-            <GridListTile>
-              <img src='https://source.unsplash.com/1600x900/?school,student' alt='std' />
-              <GridListTileBar
-                title='nonon'
-              />
-            </GridListTile>
-            <GridListTile>
-              <img src='https://source.unsplash.com/1600x900/?school,coding' alt='std' />
-              <GridListTileBar
-                title='coding'
-              />
-            </GridListTile>
-            <GridListTile>
-              <img src='https://source.unsplash.com/1600x900/?school,sky' alt='std' />
-              <GridListTileBar
-                title='sky'
-              />
-            </GridListTile>
-            <GridListTile>
-              <img src='https://source.unsplash.com/1600x900/?school,music' alt='std' />
-              <GridListTileBar
-                title='music'
-              />
-            </GridListTile>
-            <GridListTile>
+      <div className={classes.root}>
+        <GridList cellHeight={200} spacing={1} className={classes.gridList}>
+            <GridListTile cols={2} rows={2}>
               <img src='https://source.unsplash.com/1600x900/?school,bank' alt='std' />
               <GridListTileBar
-                title='bank'
+                title='{tile.title}'
+                titlePosition="top"
+                actionPosition="left"
+                className={classes.titleBar}
               />
             </GridListTile>
-
+            <GridListTile cols={2} rows={2}>
+              <img src='https://source.unsplash.com/1600x900/?school,music' alt='std' />
+              <GridListTileBar
+                title='{tile.title}'
+                titlePosition="top"
+                actionPosition="left"
+                className={classes.titleBar}
+              />
+            </GridListTile>
+            <GridListTile cols={2} rows={2}>
+              <img src='https://source.unsplash.com/1600x900/?school,birds' alt='std' />
+              <GridListTileBar
+                title='{tile.title}'
+                titlePosition="top"
+                actionPosition="left"
+                className={classes.titleBar}
+              />
+            </GridListTile>
+            <GridListTile cols={2} rows={2}>
+              <img src='https://source.unsplash.com/1600x900/?school,mango' alt='std' />
+              <GridListTileBar
+                title='{tile.title}'
+                titlePosition="top"
+                actionPosition="left"
+                className={classes.titleBar}
+              />
+            </GridListTile>
         </GridList>
-    </div>  */}
-
-    <div className={classes.root}>
-      <GridList cellHeight={200} spacing={1} className={classes.gridList}>
-          <GridListTile cols={2} rows={2}>
-            <img src='https://source.unsplash.com/1600x900/?school,bank' alt='std' />
-            <GridListTileBar
-              title='{tile.title}'
-              titlePosition="top"
-              actionPosition="left"
-              className={classes.titleBar}
-            />
-          </GridListTile>
-          <GridListTile cols={2} rows={2}>
-            <img src='https://source.unsplash.com/1600x900/?school,music' alt='std' />
-            <GridListTileBar
-              title='{tile.title}'
-              titlePosition="top"
-              actionPosition="left"
-              className={classes.titleBar}
-            />
-          </GridListTile>
-          <GridListTile cols={2} rows={2}>
-            <img src='https://source.unsplash.com/1600x900/?school,birds' alt='std' />
-            <GridListTileBar
-              title='{tile.title}'
-              titlePosition="top"
-              actionPosition="left"
-              className={classes.titleBar}
-            />
-          </GridListTile>
-          <GridListTile cols={2} rows={2}>
-            <img src='https://source.unsplash.com/1600x900/?school,mango' alt='std' />
-            <GridListTileBar
-              title='{tile.title}'
-              titlePosition="top"
-              actionPosition="left"
-              className={classes.titleBar}
-            />
-          </GridListTile>
-      </GridList>
-    </div>
+      </div>
     </Card>
   );
 };
