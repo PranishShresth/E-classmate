@@ -70,7 +70,7 @@ export default function DashboardHeader() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>          
           <DashboardDrawer />
           <Typography className={classes.title} variant="h5" noWrap>

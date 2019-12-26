@@ -9,6 +9,7 @@ import OnePost from '../../components/OnePost/OnePost';
 const useStyles = makeStyles(theme => ({
     container: {
         minHeight: '80vh',
+        paddingTop: '25vh',
     },
     card: {
         backgroundColor: theme.palette.common.black,
@@ -31,6 +32,9 @@ const Assignment = () => {
         <AddPost />
         <EmptyPost />
         <OnePost />
+        <OnePost />
+        <OnePost />
+        <EmptyPost />
     </div>
     );
 };
