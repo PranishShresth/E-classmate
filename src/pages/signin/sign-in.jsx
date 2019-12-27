@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Box, Button, Checkbox, Paper, Tab, Tabs, TextField, Typography } from '@material-ui/core';
+import { Box, Button, Paper, Tab, Tabs, TextField, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core'
 
 import NewHeader from '../../components/NewHeader/NewHeder';
+import SignInForm from '../../components/SignIn/SignIn';
 
 const useStyles = makeStyles(theme =>  ({
 	root: {
@@ -66,7 +67,6 @@ function a11yProps(index) {
 const SignIn = () => {
 	const classes = useStyles();
 	const [value, setValue] = React.useState(0);
-	const [checked, setChecked] = React.useState(false);
 	const [inputs, setInputs] = React.useState({});
 
 	const handleSubmit = event => {
@@ -83,10 +83,6 @@ const SignIn = () => {
 			[event.target.name]: event.target.value
 		}));
 	};
-
-	const handleCheck = event => {
-    setChecked(event.target.checked);
-  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -108,50 +104,7 @@ const SignIn = () => {
 					</Tabs>
 
 					<TabPanel value={value} index={0}>
-						<form onSubmit={handleSubmit}>
-							<div className={classes.formContainer}>
-								<TextField 
-									className={classes.textField}
-									onChange={handleInputChange}
-									value={inputs.email}
-									label="Email"
-									name="email"
-									required
-									fullWidth
-								/>
-								<TextField 
-									className={classes.textField}
-									onChange={handleInputChange}
-									value={inputs.password}
-									label="Password"
-									type="password"
-									name="password"
-									required
-									fullWidth
-								/>
-								<div className={classes.tos}>
-									<Checkbox
-										checked={checked}
-										onChange={handleCheck}
-										value="primary"
-										color="primary"
-										inputProps={{ 'aria-label': 'primary checkbox' }}
-									/>
-									<Typography variant="caption">I agree with terms of services and conditions</Typography>
-								</div>
-								<Button 
-									className={classes.button}
-									type="submit"
-									variant="contained"
-									color="primary"
-								>
-									Sign In
-								</Button>
-								<Button className={classes.button} variant="contained">
-									Sign In with Google
-								</Button>
-							</div>
-						</form>
+						<SignInForm />
 					</TabPanel>
 					<TabPanel value={value} index={1}>
 						<form onSubmit={handleSubmit}>
