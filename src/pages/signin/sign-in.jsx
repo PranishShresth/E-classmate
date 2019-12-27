@@ -67,6 +67,22 @@ const SignIn = () => {
 	const classes = useStyles();
 	const [value, setValue] = React.useState(0);
 	const [checked, setChecked] = React.useState(false);
+	const [inputs, setInputs] = React.useState({});
+
+	const handleSubmit = event => {
+		if(event) {
+			event.preventDefault();
+		}
+		console.log(inputs);
+	};
+
+	const handleInputChange = event => {
+		event.persist();
+		setInputs(inputs => ({
+			...inputs,
+			[event.target.name]: event.target.value
+		}));
+	};
 
 	const handleCheck = event => {
     setChecked(event.target.checked);
@@ -92,10 +108,27 @@ const SignIn = () => {
 					</Tabs>
 
 					<TabPanel value={value} index={0}>
-						<form>
+						<form onSubmit={handleSubmit}>
 							<div className={classes.formContainer}>
-								<TextField className={classes.textField} label="Email" required  fullWidth/>
-								<TextField className={classes.textField} label="Password" type="password" required fullWidth />
+								<TextField 
+									className={classes.textField}
+									onChange={handleInputChange}
+									value={inputs.email}
+									label="Email"
+									name="email"
+									required
+									fullWidth
+								/>
+								<TextField 
+									className={classes.textField}
+									onChange={handleInputChange}
+									value={inputs.password}
+									label="Password"
+									type="password"
+									name="password"
+									required
+									fullWidth
+								/>
 								<div className={classes.tos}>
 									<Checkbox
 										checked={checked}
@@ -106,7 +139,12 @@ const SignIn = () => {
 									/>
 									<Typography variant="caption">I agree with terms of services and conditions</Typography>
 								</div>
-								<Button className={classes.button} variant="contained" color="primary">
+								<Button 
+									className={classes.button}
+									type="submit"
+									variant="contained"
+									color="primary"
+								>
 									Sign In
 								</Button>
 								<Button className={classes.button} variant="contained">
@@ -116,12 +154,52 @@ const SignIn = () => {
 						</form>
 					</TabPanel>
 					<TabPanel value={value} index={1}>
-						<form>
+						<form onSubmit={handleSubmit}>
 							<div className={classes.formContainer}>
-								<TextField className={classes.textField} label="Email" required  fullWidth/>
-								<TextField className={classes.textField} label="Username" required fullWidth />
-								<TextField className={classes.textField} label="Password" required fullWidth type="password"/>
-								<Button className={classes.button} variant="contained" color="primary">
+								<TextField 
+									className={classes.textField}
+									onChange={handleInputChange}
+									value={inputs.email}
+									label="Email"
+									name="email"
+									required
+									fullWidth
+								/>
+								<TextField 
+									className={classes.textField}
+									onChange={handleInputChange}
+									value={inputs.username}
+									label="Username"
+									name="username"
+									required
+									fullWidth
+								/>
+								<TextField 
+									className={classes.textField}
+									onChange={handleInputChange}
+									value={inputs.password}
+									label="Password"
+									name="password"
+									required
+									fullWidth
+									type="password"
+								/>
+								<TextField 
+									className={classes.textField} 
+									onChange={handleInputChange}
+									value={inputs.confirmPassword}
+									name="confirmPassword"
+									label="Confirm Password" 
+									required 
+									fullWidth 
+									type="password"
+								/>
+								<Button
+									className={classes.button}
+									type="submit"
+									variant="contained"
+									color="primary"
+								>
 									Sign Up
 								</Button>
 								<Button className={classes.button} variant="contained">
