@@ -7,8 +7,7 @@ const useForm = (initialValues, callback) => {
     if(event) {
       event.preventDefault();
     }
-    console.log(inputs);
-    callback();
+    callback(inputs);
   };
 
   const handleInputChange = event => {

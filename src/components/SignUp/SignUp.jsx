@@ -21,8 +21,7 @@ const useStyles = makeStyles(theme => ({
 const SignUpForm = () => {
   const classes = useStyles();
 
-  const signUpFunction = () => {
-    console.log('signed up');
+  const signUpFunction = (inputs) => {
   };
 
   let { inputs, handleSubmit, handleInputChange } = useForm({}, signUpFunction);
