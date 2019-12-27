@@ -31,6 +31,7 @@ const SignUpForm = () => {
     <form onSubmit={handleSubmit}>
       <div>
         <TextField 
+          className={classes.textField}
           onChange={handleInputChange}
           value={inputs.email}
           label="Email"
@@ -39,6 +40,7 @@ const SignUpForm = () => {
           fullWidth
         />
         <TextField 
+          className={classes.textField}
           onChange={handleInputChange}
           value={inputs.username}
           label="Username"
@@ -47,6 +49,7 @@ const SignUpForm = () => {
           fullWidth
         />
         <TextField 
+          className={classes.textField}
           onChange={handleInputChange}
           value={inputs.password}
           label="Password"
@@ -56,6 +59,7 @@ const SignUpForm = () => {
           type="password"
         />
         <TextField 
+          className={classes.textField}
           onChange={handleInputChange}
           value={inputs.confirmPassword}
           name="confirmPassword"

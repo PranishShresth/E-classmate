@@ -14,9 +14,12 @@ const useStyles = makeStyles(theme => ({
 	tos: {
 		marginRight: '10vw',
 	},
-	button: {
+	signButton: {
 		marginBottom: '10px',
-		marginRight: '20vw',
+    marginRight: '20vw',
+	},
+	textField: {
+		marginBottom: '10px',
 	},
 }));
 
@@ -40,6 +43,7 @@ const SignInForm = () => {
     <form onSubmit={handleSubmit}>
       <div className={classes.formContainer}>
         <TextField 
+          className={classes.textField}
           onChange={handleInputChange}
           value={inputs.email}
           label="Email"
@@ -48,6 +52,7 @@ const SignInForm = () => {
           fullWidth
         />
         <TextField 
+          className={classes.textField}
           onChange={handleInputChange}
           value={inputs.password}
           label="Password"
@@ -67,14 +72,14 @@ const SignInForm = () => {
           <Typography variant="caption">I agree with terms of services and conditions</Typography>
         </div>
         <Button 
-          className={classes.button}
+          className={classes.signButton}
           type="submit"
           variant="contained"
           color="primary"
         >
           Sign In
         </Button>
-        <Button className={classes.button} variant="contained">
+        <Button className={classes.signButton} variant="contained">
           Sign In with Google
         </Button>
       </div>
