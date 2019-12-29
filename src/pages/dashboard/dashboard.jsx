@@ -12,11 +12,20 @@ import Note from "../note/note";
 
 const useStyles = makeStyles(theme => ({
   tabs: {
-    alignContent: "center"
+    alignContent: "center",
+    position: "fixed",
+    paddingTop: "12vh",
+    paddingLeft: "6vw",
+    backgroundColor: theme.palette.background.paper,
+    width: "100%",
+    zIndex: 500
   },
   root: {
     backgroundColor: theme.palette.background.paper,
     color: theme.palette.common.white
+  },
+  assignmentTab: {
+    width: "46vw"
   }
 }));
 
@@ -74,7 +83,11 @@ const Dashboard = () => {
         indicatorColor="primary"
         variant="fullWidth"
       >
-        <Tab label="ASSIGNMENT" {...a11yProps(0)} />
+        <Tab
+          className={classes.assignmentTab}
+          label="ASSIGNMENT"
+          {...a11yProps(0)}
+        />
         <Tab label="CHAT" {...a11yProps(1)} />
         <Tab label="NOTE" {...a11yProps(2)} />
       </Tabs>
@@ -84,13 +97,28 @@ const Dashboard = () => {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        <TabPanel value={value} index={0} dir={theme.direction}>
+        <TabPanel
+          className={classes.assignment}
+          value={value}
+          index={0}
+          dir={theme.direction}
+        >
           <Assignment />
         </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
+        <TabPanel
+          className={classes.chat}
+          value={value}
+          index={1}
+          dir={theme.direction}
+        >
           <Chat />
         </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
+        <TabPanel
+          className={classes.note}
+          value={value}
+          index={2}
+          dir={theme.direction}
+        >
           <Note />
         </TabPanel>
       </SwipeableViews>

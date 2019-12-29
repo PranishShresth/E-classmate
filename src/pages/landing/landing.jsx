@@ -3,7 +3,9 @@ import Landingimage from "../../assets/svg/landing.svg";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import Forms from "../../components/Form/form";
-import { Header, Footer } from "../../links/links";
+import { Footer } from "../../links/links";
+
+import NewHeader from '../../components/NewHeader/NewHeder';
 
 import "./landing.css";
 
@@ -11,7 +13,7 @@ export default class Landing extends Component {
   render() {
     return (
       <div className="landing-main-container">
-        <Header />
+        <NewHeader />
         <div className="landing-container">
           <main>
             <div className="first-section-container">

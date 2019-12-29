@@ -70,7 +70,7 @@ export default function DashboardHeader() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <DashboardDrawer />
           <Typography className={classes.title} variant="h5" noWrap>
@@ -80,7 +80,7 @@ export default function DashboardHeader() {
           <div className={classes.grow} />
           <div>
             <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={0} color="secondary">
+              <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />
               </Badge>
             </IconButton>

@@ -37,7 +37,7 @@ export default function Header() {
               <li className="light-speed-in">About</li>
             </span>
           </Link>
-          <Link to="/signup">
+          <Link to="/signin">
             <span>
               <li className="light-speed-in">Sign in</li>
             </span>

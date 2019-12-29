@@ -1,15 +1,27 @@
 import React from 'react';
 
-import { Card, CardHeader, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+
+import AddPost from '../../components/AddPost/AddPost';
+import EmptyPost from '../../components/EmptyPost/EmptyPost';
+import OnePost from '../../components/OnePost/OnePost';
 
 const useStyles = makeStyles(theme => ({
     container: {
-        minHeight: '100vh',
+        minHeight: '80vh',
+        paddingTop: '25vh',
     },
     card: {
         backgroundColor: theme.palette.common.black,
-    }
+    },
+    button: {
+        marginLeft: 'auto',
+        backgroundColor: theme.palette.primary.main,
+    },
+    buttonContainer: {
+        marginLeft: '24vw',
+        marginBottom: '11px',
+    },
 }));
 
 const Assignment = () => {
@@ -17,12 +29,12 @@ const Assignment = () => {
     const classes = useStyles();
     return (
     <div className={classes.container}>        
-        <Card className={classes.card}>
-            <CardHeader
-                title='Maths BPB Ex 2.2'
-                subheader='Requested by @sagarmichael' 
-            />
-        </Card>
+        <AddPost />
+        <EmptyPost />
+        <OnePost />
+        <OnePost />
+        <OnePost />
+        <EmptyPost />
     </div>
     );
 };
