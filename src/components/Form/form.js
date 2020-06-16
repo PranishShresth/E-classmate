@@ -18,6 +18,7 @@ export default class Forms extends Component {
   handleSubmit = e => {
     e.preventDefault();
   };
+
   render() {
     return (
       <div className="form-controls">

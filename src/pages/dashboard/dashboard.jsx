@@ -10,7 +10,7 @@ import Chat from "../chat/chat";
 import DashboardHeader from "../../components/DashboardHeader/dashboard-header";
 import Note from "../note/note";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   tabs: {
     alignContent: "center",
     position: "fixed",
@@ -18,15 +18,15 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: "6vw",
     backgroundColor: theme.palette.background.paper,
     width: "100%",
-    zIndex: 500
+    zIndex: 500,
   },
   root: {
     backgroundColor: theme.palette.background.paper,
-    color: theme.palette.common.white
+    color: theme.palette.common.white,
   },
   assignmentTab: {
-    width: "46vw"
-  }
+    width: "46vw",
+  },
 }));
 
 function TabPanel(props) {
@@ -49,7 +49,7 @@ function TabPanel(props) {
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired
+  value: PropTypes.any.isRequired,
 };
 
 const Dashboard = () => {
@@ -62,14 +62,14 @@ const Dashboard = () => {
 
   console.log(theme);
 
-  const handleChangeIndex = index => {
+  const handleChangeIndex = (index) => {
     setValue(index);
   };
 
   function a11yProps(index) {
     return {
       id: `simple-tab-${index}`,
-      "aria-controls": `simple-tabpanel-${index}`
+      "aria-controls": `simple-tabpanel-${index}`,
     };
   }
 
