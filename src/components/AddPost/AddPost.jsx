@@ -55,7 +55,7 @@ const AddPost = () => {
       professor: professor,
     };
     axios
-      .post("/users", obj)
+      .post("/api/posts", obj)
       .then(function (response) {
         console.log(response);
       })
