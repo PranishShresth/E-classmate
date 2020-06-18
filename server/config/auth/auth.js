@@ -23,17 +23,9 @@ passport.deserializeUser((id, done) => {
 });
 
 passport.use(
-  new GoogleStrategy(
-    {
-      clientID:
-        "937632957539-rgj6ua135uhqo0lnuejibuted9ht71ta.apps.googleusercontent.com",
-      clientSecret: "3XSvhFQ1FWVSU18hXQLAOLfx",
-      callbackURL: "/auth/google/callback",
-    },
-    function (accessToken, refreshToken, profile, done) {
-      done(null, profile);
-    }
-  )
+  new GoogleStrategy({}, function (accessToken, refreshToken, profile, done) {
+    done(null, profile);
+  })
 );
 
 router.get(

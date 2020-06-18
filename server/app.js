@@ -8,23 +8,36 @@ const logger = require("morgan");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const passport = require("passport");
+const session = require("express-session");
+
+const flash = require("connect-flash");
+
 require("dotenv").config();
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(
+  session({
+    cookie: { maxAge: 60000 },
+    secret: "Awesome",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 
 app.listen(process.env.port || 5000, () => {
   console.log("Server started");
 });
 
 const indexRouter = require("./routes/index");
-const usersRouter = require("./routes/users");
+const usersRouter = require("./routes/users/users");
 const postRouter = require("./routes/posts/posts");
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 
 app.use(cors());
+app.use(flash());
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

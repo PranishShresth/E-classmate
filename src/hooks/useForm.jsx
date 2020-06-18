@@ -1,27 +1,26 @@
 import React from "react";
+import axios from "axios";
 
 const useForm = (initialValues, callback) => {
   const [inputs, setInputs] = React.useState({ initialValues });
 
-  const handleSubmit = event => {
-    if (event) {
-      event.preventDefault();
-    }
-    callback(inputs);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    callback();
   };
 
-  const handleInputChange = event => {
+  const handleInputChange = (event) => {
     event.persist();
-    setInputs(inputs => ({
+    setInputs((inputs) => ({
       ...inputs,
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     }));
   };
 
   return {
     handleSubmit,
     handleInputChange,
-    inputs
+    inputs,
   };
 };
 

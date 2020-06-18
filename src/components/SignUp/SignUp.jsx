@@ -1,35 +1,35 @@
-import React from 'react';
+import React from "react";
 
-import {
-  Button,
-  TextField  
-} from '@material-ui/core';
-import { makeStyles } from '@material-ui/core';
+import { Button, TextField } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
+import axios from "axios";
+import useForm from "../../hooks/useForm";
 
-import useForm from '../../hooks/useForm';
-
-const useStyles = makeStyles(theme => ({
-	button: {
-		marginBottom: '10px',
-		marginRight: '20vw',
-	},
-	textField: {
-		marginBottom: '10px',
-	},
-}))
+const useStyles = makeStyles((theme) => ({
+  button: {
+    marginBottom: "10px",
+    marginRight: "20vw",
+  },
+  textField: {
+    marginBottom: "10px",
+  },
+}));
 
 const SignUpForm = () => {
   const classes = useStyles();
-
-  const signUpFunction = (inputs) => {
+  const signUpFunction = async () => {
+    const auth = await axios.post("/api/users/auth", inputs);
+    const resp = await auth.res;
   };
+  let { inputs, handleSubmit, handleInputChange } = useForm(
+    { username: "", email: "", password: "", confirmPassword: "" },
+    signUpFunction
+  );
 
-  let { inputs, handleSubmit, handleInputChange } = useForm({}, signUpFunction);
-  
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <TextField 
+        <TextField
           className={classes.textField}
           onChange={handleInputChange}
           value={inputs.email}
@@ -38,7 +38,7 @@ const SignUpForm = () => {
           required
           fullWidth
         />
-        <TextField 
+        <TextField
           className={classes.textField}
           onChange={handleInputChange}
           value={inputs.username}
@@ -47,7 +47,7 @@ const SignUpForm = () => {
           required
           fullWidth
         />
-        <TextField 
+        <TextField
           className={classes.textField}
           onChange={handleInputChange}
           value={inputs.password}
@@ -57,14 +57,14 @@ const SignUpForm = () => {
           fullWidth
           type="password"
         />
-        <TextField 
+        <TextField
           className={classes.textField}
           onChange={handleInputChange}
           value={inputs.confirmPassword}
           name="confirmPassword"
-          label="Confirm Password" 
-          required 
-          fullWidth 
+          label="Confirm Password"
+          required
+          fullWidth
           type="password"
         />
         <Button
@@ -79,8 +79,8 @@ const SignUpForm = () => {
           Sign Up with Google
         </Button>
       </div>
-	  </form>
-  )
+    </form>
+  );
 };
 
-export default  SignUpForm;
+export default SignUpForm;

@@ -1,48 +1,51 @@
-import React from 'react';
+import React from "react";
 
-import {
-  Button,
-  Checkbox,
-  TextField,
-  Typography
-} from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { Button, Checkbox, TextField, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import axios from "axios";
+import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-import useForm from '../../hooks/useForm';
+import useForm from "../../hooks/useForm";
 
-const useStyles = makeStyles(theme => ({
-	tos: {
-		marginRight: '10vw',
-	},
-	signButton: {
-		marginBottom: '10px',
-    marginRight: '20vw',
-	},
-	textField: {
-		marginBottom: '10px',
-	},
+const useStyles = makeStyles((theme) => ({
+  tos: {
+    marginRight: "10vw",
+  },
+  signButton: {
+    marginBottom: "10px",
+    marginRight: "20vw",
+  },
+  textField: {
+    marginBottom: "10px",
+  },
 }));
 
-
 const SignInForm = () => {
-  const signInFunction = () => {
-    console.log('usu');
-  };
-
   const classes = useStyles();
   const [checked, setChecked] = React.useState(false);
+  const history = useHistory();
 
+  const signInFunction = async () => {
+    const res = await axios.post("/api/users/login", inputs);
+    const resp = await res.data;
+    if (resp) {
+      history.push("/dashboard");
+    }
+  };
+  let { inputs, handleSubmit, handleInputChange } = useForm(
+    { email: "", password: "" },
+    signInFunction
+  );
 
-  let { inputs, handleSubmit, handleInputChange } = useForm({}, signInFunction);
-  
-	const handleCheck = event => {
+  const handleCheck = (event) => {
     setChecked(event.target.checked);
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <div className={classes.formContainer}>
-        <TextField 
+        <TextField
           className={classes.textField}
           onChange={handleInputChange}
           value={inputs.email}
@@ -51,7 +54,7 @@ const SignInForm = () => {
           required
           fullWidth
         />
-        <TextField 
+        <TextField
           className={classes.textField}
           onChange={handleInputChange}
           value={inputs.password}
@@ -67,11 +70,13 @@ const SignInForm = () => {
             onChange={handleCheck}
             value="primary"
             color="primary"
-            inputProps={{ 'aria-label': 'primary checkbox' }}
+            inputProps={{ "aria-label": "primary checkbox" }}
           />
-          <Typography variant="caption">I agree with terms of services and conditions</Typography>
+          <Typography variant="caption">
+            I agree with terms of services and conditions
+          </Typography>
         </div>
-        <Button 
+        <Button
           className={classes.signButton}
           type="submit"
           variant="contained"
@@ -79,12 +84,12 @@ const SignInForm = () => {
         >
           Sign In
         </Button>
-        <Button className={classes.signButton} variant="contained">
-          Sign In with Google
-        </Button>
       </div>
+      <Button className={classes.signButton} variant="contained">
+        Sign In with Google
+      </Button>
     </form>
-  )
+  );
 };
 
 export default SignInForm;
